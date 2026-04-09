@@ -1,0 +1,142 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\newcommand{\resumeItem}[1]{\item\small{#1 \vspace{-2pt}}}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+%---------- HEADING ----------
+\begin{center}
+    \textbf{\Large \scshape Huynh (Heidi) Ho} \\ \vspace{1pt}
+    \small (223) 350-8784 $|$
+    \href{mailto:honhuhuynh1210@gmail.com}{honhuhuynh1210@gmail.com} $|$
+    \href{https://linkedin.com/in/heidi-ho-16b875246}{linkedin.com/in/heidi-ho-16b875246} $|$
+    \href{https://github.com/huynna12}{github.com/huynna12}
+\end{center}
+
+%---------- EDUCATION ----------
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Gettysburg College}{Gettysburg, PA}
+    {B.S. Computer Science \& Mathematics, Minor in Data Science $|$ GPA: 3.72}{Aug. 2023 -- May 2027}
+\resumeSubHeadingListEnd
+
+%---------- PROJECTS ----------
+\section{Projects}
+\resumeSubHeadingListStart
+
+  \resumeProjectHeading
+    {\textbf{Conversation Nervousness Analyzer} $|$ \emph{Python, Claude API, Streamlit, Prompt Engineering}}{2026}
+  \resumeItemListStart
+    \resumeItem{Engineered a context-aware nervousness classifier using a structured chain-of-thought prompt across three weighted signals (filler words, repetition, deflection) with \texttt{temperature=0} for deterministic scoring.}
+    \resumeItem{Built a labeled eval suite of three annotated transcripts to benchmark prompt iterations and validate score separation across nervousness levels; deployed as an interactive web app via Streamlit.}
+  \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{Mancala AI} $|$ \emph{Java}}{2024}
+  \resumeItemListStart
+    \resumeItem{Implemented two AI agents using depth-limited Minimax search with Alpha-Beta pruning and custom heuristic evaluation functions; built a tournament runner to benchmark agents head-to-head across varying search depths.}
+  \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{Autonomous Line-Following Robot} $|$ \emph{Python, PicarX}}{2024}
+  \resumeItemListStart
+    \resumeItem{Programmed a PicarX robot in Python to autonomously follow a line through turns up to 90° using three grayscale sensors; implemented threshold-based state detection to classify left/center/right sensor readings as line or background, then mapped each sensor state to steering corrections.}
+  \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{Sudoku App} $|$ \emph{Kotlin, Java, Jetpack Compose, Firebase Auth}}{2025}
+  \resumeItemListStart
+    \resumeItem{Developed a sudoku game in Kotlin/Java with Jetpack Compose UI across 9 screens; implemented a backtracking puzzle generator in Java guaranteeing a unique solution per puzzle by running a fresh constraint-solving pass after each cell removal.}
+    \resumeItem{Integrated Firebase Authentication (email/guest) and Firestore for cloud-synced leaderboards and saved game state; persisted in-progress boards locally with SharedPreferences.}
+  \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{H-Commerce} $|$ \emph{Python, Django REST Framework, React, TailwindCSS, JWT, Vite}}{2025}
+  \resumeItemListStart
+    \resumeItem{Built a full-stack e-commerce platform with dual buyer/seller roles, cart, checkout with real-time stock validation, order tracking, and a seller dashboard with item-level cancellation approval; secured with JWT auth, custom permission classes, and silent token refresh via Axios interceptors.}
+    \resumeItem{Designed REST APIs with auto-generated OpenAPI/Swagger docs (drf-spectacular); deployed backend to Render with environment-variable configuration and resolved CORS for a decoupled React frontend.}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%---------- EXPERIENCE ----------
+\section{Experience}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Peer Learning Assistant --- Calculus I}{Aug. 2024 -- Dec. 2024}
+    {Gettysburg College, Department of Mathematics}{Gettysburg, PA}
+  \resumeItemListStart
+    \resumeItem{Facilitate weekly collaborative study sessions for 10--20 students, reinforcing limits, differentiation, and integration through guided problem-solving; develop structured worksheets and work with the instructor to address recurring student misconceptions.}
+  \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%---------- TECHNICAL SKILLS ----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+    \textbf{Languages}{: Java, Python, Kotlin, C++, JavaScript, PHP, SQL, ARM Assembly, HTML/CSS} \\
+    \textbf{Frameworks \& Libraries}{: Django REST Framework, React, Jetpack Compose, TailwindCSS, Streamlit, Axios, SimpleJWT} \\
+    \textbf{Tools \& Platforms}{: Git, GitHub, Firebase (Auth, Firestore), Anthropic Claude API, Android Studio, VS Code, MySQL} \\
+    \textbf{Concepts}{: Prompt Engineering, LLM Integration, Evaluation Frameworks, REST API Design, JWT Authentication, Reinforcement Learning, Minimax/Alpha-Beta Pruning, Backtracking Algorithms, OOP} \\
+  }}
+\end{itemize}
+
+%---------- COURSEWORK ----------
+\section{Relevant Coursework}
+Data Structures \& Algorithms $|$ Artificial Intelligence $|$ Database Systems $|$ Computer Organization \& Assembly Language $|$ Theory of Computation $|$ Object-Oriented Programming $|$ Probability \& Statistics $|$ Linear Algebra
+
+\end{document}
